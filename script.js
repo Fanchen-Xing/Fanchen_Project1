@@ -267,10 +267,11 @@ class ControlPanel {
       draw(ctx)
 
     } else if (e.target == this._saveButton) {
-      var picture = document.getElementById("picture")
-      var dataURL = picture.toDataURL("image/png");
-      var newTab = window.open(picture.toDataURL('image/png'));
-      newTab.document.write("<img src='" + dataURL + "' alt='from canvas'/>");
+      var imageLink = document.createElement('a');
+      var picture = document.getElementById("picture");
+      imageLink.download = 'snap.png';
+      imageLink.href = picture.toDataURL("image/png", 1);
+      imageLink.click();
     }
 
     if (e.target == this._catButton) {
