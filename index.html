@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script defer src="face-api.min.js"></script>
+  <script defer src="script.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    canvas {
+      position: absolute;
+    }
+
+    input {
+      padding: 1px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 16px;
+      width: 75px;
+      height: 25px;
+      margin-right: 16px;
+    }
+
+    label {
+      position: absolute; 
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: darkolivegreen;
+      top:65px; 
+      left:380px;
+      font-size: 40px; 
+      margin: auto;
+    }
+
+  </style>
+</head>
+<body>
+  <label id="myLabel" class = "label">Special Effects Camera</label>
+  <video id="video" width="640" height="480" preload autoplay loop muted style="position:absolute; top:150px; left:245px"></video>
+  <canvas id="myCanvas" style="position: absolute; top:150px; left: 245px"></canvas>
+  <canvas id="picture" width = "640" height="480" style="margin-top: 4px; margin-bottom: 4px; border-style: solid; border-color: yellowgreen; border-width: 1px; position: absolute; top: 700px; left: 245px"></canvas>
+  <div id="control"></div>
+</body>
+</html>
